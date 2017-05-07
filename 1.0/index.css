@@ -1,0 +1,160 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.contain_body a {
+    color: white;
+    text-decoration: none;
+}
+
+.contain_body a:hover {
+    color: #bce8f1;
+}
+
+
+.main_body {
+    position: relative;
+    height: 100%;
+}
+
+.contain_body {
+    position: relative;
+    height: 100%;
+    overflow: auto;
+}
+
+section {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border: none;
+}
+
+#text {
+    background: #F06060;
+    top: 0;
+    left: 0;
+}
+
+#state {
+    background: #FA987D;
+    top: 0;
+    left: 50%;
+}
+
+#admin {
+    background: #72CCA7;
+    top: 50%;
+    left: 0;
+}
+
+#info {
+    background: #10A296;
+    top: 50%;
+    left: 50%;
+}
+
+.view_front {
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10%;
+}
+
+
+.view_back {
+    position: absolute;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    animation: showdiv 200ms;
+}
+
+.view_admin {
+    bottom: 0;
+    left: 0;
+    background: #72CCA7;
+}
+
+.view_admin .back_info {
+    background: #72CCA7;
+}
+
+.view_state {
+    top: 0;
+    right: 0;
+    background: #FA987D;
+}
+
+.view_text {
+    top: 0;
+    left: 0;
+    background: #F06060;
+}
+
+.view_text .back_info {
+    background: #F06060;
+}
+
+@keyframes showdiv {
+    0%   { width: 0; height: 0;}
+    25%  { width: 25%; height: 25%;}
+    50%  { width: 50%; height: 50%;}
+    75%  { width: 75%; height: 75%;}
+    100% { width: 100%; height: 100%;}
+}
+
+.back_close {
+    display: block;
+    z-index: 999;
+    height: 32px;
+}
+
+.back_close img{
+    position: absolute;
+    right: 5px;
+}
+
+.back_close img:hover {
+    background: cornsilk;
+}
+
+.cartoon {
+    width: 300px;
+    height: 20px;
+    background: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cartoon_show {
+    height: 20px;
+}
+
+
+@media screen and (max-width: 400px) {
+    section h2{
+        font-size: 10px;
+    }
+    .contain_body {
+        overflow: scroll;
+    }
+    section {
+        position: static;
+        width: 100%;
+        height: 25%;
+    }
+    .view_front {
+        margin: 0 auto;
+        position: relative;
+        top: 5px;
+    }
+    section h2 {
+        margin: 0;
+        font-size: 25px;
+        margin-top: 5px;
+    }
+
+}

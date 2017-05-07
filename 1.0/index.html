@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZYPC纳新</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=4, minimum-scale=1, user-scalable=yes" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="main_body">
+    <div class="contain_body">
+        <section id="text">
+            <div class="view_front">
+                <a href="#" id="a_text"><img src="text.png">
+                <h2>在线答题</h2></a>
+            </div>
+        </section>
+        <section id="state">
+            <div class="view_front">
+                <a href="#" id="a_state"><img src="search.png">
+                <h2>查询进度</h2></a>
+            </div>
+        </section>
+        <section id="admin">
+            <div class="view_front">
+                <a href="#" id="a_admin"><img src="admin.png">
+                    <h2>纳新管理</h2></a>
+            </div>
+        </section>
+        <section id="info">
+            <div class="view_front">
+                <a href="#" id="a_info"><img src="account.png">
+                    <h2>郭吉航</h2></a>
+            </div>
+        </section>
+        <div class="view_text view_back">
+            <div class="back_close"><img class="img_close" src="close.png"></div>
+            <div class="back_info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12"><h1>在线答题</h1></div>
+                    </div>
+                    <div class="row">
+                        <div class="question_box">
+                            <div class="col-md-8 col-md-offset-2">
+                                <form action="#" method="post" id="main_text">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-5">
+                            <button type="button" class="btn btn-primary btn-lg" id="text_more">加载更多...</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <h3>注意：只能够提交一次，提交完后不能进入答题页面</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-5">
+                            <button type="submit" form="main_text" class="btn btn-primary btn-lg" id="text_submit">提交</button>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="connectUs">
+                                <p>联系我们</p>
+                                <ul>
+                                    <li>地址：陕西省西安市西安邮电大学长安校区西区图书馆5楼514室</li>
+                                    <li>邮箱：admin@smartxupt.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="view_state view_back">
+            <div class="back_close"><img class="img_close" src="close.png"></div>
+            <div class="back_info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <h2>你的面试进度为</h2>
+                            <div class="cartoon">
+                                <div class="cartoon_show" id="the_stateimg"></div>
+                            </div>
+                            <h2 style="text-align: center" id="the_statetxt"></h2>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <div class="connectUs">
+                                <p>联系我们</p>
+                                <ul>
+                                    <li>地址：陕西省西安市西安邮电大学长安校区西区图书馆5楼514室</li>
+                                    <li>邮箱：admin@smartxupt.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="view_admin view_back">
+            <div class="back_close"><img class="img_close" src="close.png"></div>
+            <div class="back_info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12"><h1>查看纳新信息</h1></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <form class="form-inline">
+                                <input class="form-control active input_txt" placeholder="提供学号查询">
+                                <button type="button" class="btn btn-primary btn-md find_people" data-toggle="modal" data-target="#myModalone">查询</button>
+                                <!--<button type="button" class="btn btn-primary btn-sm">排序</button>-->
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-md-offset-4">
+                            <h3>上传题目</h3>
+                            <form class="form-inline">
+                                <br>
+                                <p>提交格式为：题目/选项之间以。分割/正确答案/ 题目与题目之间用|来进行分割。如以下提交格式为：|请问谁是ZYPC最帅的人/A:郭吉航。B：郭吉航。C：郭吉航。D：郭吉航/A|</p>
+                                <textarea id="input_text" style="height: 100%; width: 100%"></textarea>
+                                <button type="button" class="btn btn-primary btn-md post_text">上传</button>
+                            </form>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <table class="table table-hover" id="table_info">
+                                <tr class="success">
+                                    <th>姓名</th>
+                                    <th>学号</th>
+                                    <th>联系方式</th>
+                                    <th>状态</th>
+                                </tr>
+                                <tr class="success">
+                                    <!-- success 通过一面-->
+                                    <!-- danger 被pass-->
+                                    <td>郭吉航</td>
+                                    <td>04152119</td>
+                                    <td>17691151557</td>
+                                    <td>一面通过</td>
+                                </tr>
+                                <tr class="success">
+                                    <td>郭吉航</td>
+                                    <td>04152119</td>
+                                    <td>17691151557</td>
+                                    <td>一面通过</td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>郭吉航</td>
+                                    <td>04152119</td>
+                                    <td>17691151557</td>
+                                    <td>一面通过</td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>郭吉航</td>
+                                    <td>04152119</td>
+                                    <td>17691151557</td>
+                                    <td>一面通过</td>
+                                </tr>
+                                <tr class="danger">
+                                    <td>郭吉航</td>
+                                    <td>04152119</td>
+                                    <td>17691151557</td>
+                                    <td>一面通过</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-5">
+                            <button type="button" class="btn btn-primary btn-lg" id="more_info">加载更多...</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--方便扩展<div class="view_info view_back">
+            <div class="back_close"><img class="img_close" src="close.png"></div>
+            <div class="back_info">
+                <p>asxasxasxasxasx</p>
+            </div>
+        </div>-->
+
+        <!--查询模块-->
+        <div class="modal fade" id="myModalone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table table-hover table-striped" id="find_table">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="index.js"></script>
+<script src="jquery-3.2.1.slim.min.js"></script>
+<script src="bootstrap.min.js"></script>
+</body>
+</html>
