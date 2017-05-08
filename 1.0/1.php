@@ -9,5 +9,6 @@
 // 	}
 $str = 3;
 echo json_encode($str);
+
 ?>
 
